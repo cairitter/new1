@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<iostream>
+#include<cmath> 
+using namespace std;
+int main(){
+	int i=1,j;
+	int x=1;
+	cout<<x<<" ";
+	for (i=2; i<=100 ;i++){
+		bool t=1;
+		for (j=2; j<=floor(sqrt(i)); j++){
+			if (i%j==0){
+				t=0;
+				break;
+			}	
+		}
+		if(t){
+			cout<<i<<" ";
+			x++;
+			if(x%5==0) cout<<endl;
+		}
+	}
+	return 0;
+}
